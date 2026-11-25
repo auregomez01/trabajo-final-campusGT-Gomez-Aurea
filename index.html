@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Día a Día - Supermercado Online</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>🛒 DÍA A DÍA</h1>
+            <p>Supermercado online</p>
+        </div>
+
+        <input
+            type="text"
+            id="buscador"
+            placeholder="Buscar productos..."
+        >
+
+        <button onclick="mostrarCarrito()">
+            Mi carrito 🛒
+            <span id="contador">0</span>
+        </button>
+    </header>
+
+    <section class="banner">
+        <h2>¡Llená el changuito sin salir de casa!</h2>
+        <p>Todo lo que necesitás para tu casa, al mejor precio.</p>
+    </section>
+
+    <main>
+
+        <section class="catalogo">
+
+            <h2>Productos destacados</h2>
+
+            <div class="categorias">
+                <button onclick="filtrarCategoria('Todos')">Todos</button>
+                <button onclick="filtrarCategoria('Almacén')">Almacén</button>
+                <button onclick="filtrarCategoria('Lácteos')">Lácteos</button>
+                <button onclick="filtrarCategoria('Bebidas')">Bebidas</button>
+                <button onclick="filtrarCategoria('Limpieza')">Limpieza</button>
+            </div>
+
+            <div id="productos" class="productos"></div>
+
+        </section>
+
+        <section class="carrito" id="carrito">
+
+            <h2>🛒 Mi carrito</h2>
+
+            <div id="listaCarrito">
+                <p class="vacio">Tu carrito está vacío.</p>
+            </div>
+
+            <div class="resumen">
+                <p>
+                    Subtotal:
+                    <strong id="subtotal">$ 0</strong>
+                </p>
+
+                <p>
+                    Envío:
+                    <strong id="envio">$ 1.200</strong>
+                </p>
+
+                <h3>
+                    Total:
+                    <span id="total">$ 1.200</span>
+                </h3>
+
+                <button
+                    id="comprar"
+                    onclick="finalizarCompra()"
+                    disabled
+                >
+                    Continuar compra
+                </button>
+
+                <button
+                    class="vaciar"
+                    onclick="vaciarCarrito()"
+                >
+                    Vaciar carrito
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Día a Día - Supermercado Online</p>
+        <p>Proyecto educativo · Precios ficticios</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

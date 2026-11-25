@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #252525;
+}
+
+/* ENCABEZADO */
+
+header {
+    background-color: #ffd629;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    color: #d9272e;
+    font-size: 25px;
+}
+
+.logo p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+header input {
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    width: 300px;
+    max-width: 100%;
+}
+
+header button {
+    background-color: #d9272e;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* BANNER */
+
+.banner {
+    background-color: #d9272e;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+/* CONTENIDO */
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 25px;
+}
+
+.catalogo h2 {
+    margin-bottom: 20px;
+}
+
+/* CATEGORÍAS */
+
+.categorias {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.categorias button {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.categorias button:hover {
+    background-color: #d9272e;
+    color: white;
+}
+
+/* PRODUCTOS */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px #00000010;
+}
+
+.producto img {
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.producto h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.producto p {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.precio {
+    color: #d9272e;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.producto button {
+    background-color: #d9272e;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.producto button:hover {
+    background-color: #b91f26;
+}
+
+/* CARRITO */
+
+.carrito {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    height: fit-content;
+    box-shadow: 0 3px 10px #00000010;
+}
+
+.carrito h2 {
+    margin-bottom: 20px;
+}
+
+.vacio {
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.item-carrito {
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+
+.item-carrito h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.item-carrito p {
+    color: #d9272e;
+    font-weight: bold;
+}
+
+.cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cantidad button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.resumen {
+    margin-top: 20px;
+}
+
+.resumen p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.resumen h3 {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#comprar {
+    background-color: #198754;
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#comprar:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.vaciar {
+    display: block;
+    margin: 15px auto 0;
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #252525;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carrito {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    header input {
+        width: 100%;
+    }
+
+    .banner h2 {
+        font-size: 24px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
